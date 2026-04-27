@@ -416,26 +416,52 @@
 
       <section id="contact" class="quote-section">
         <div class="container">
-          <div class="quote-card text-center">
-            <div class="quote-overlay"></div>
+          <div class="contact-card">
+            <div class="contact-image">
+              <div class="contact-overlay"></div>
 
-            <h2>Demander une <em>disponibilité</em></h2>
+              <form class="contact-form">
+                <label>
+                  Nom
+                  <input type="text" placeholder="Votre nom" required />
+                </label>
 
-            <p>
-              Expliquez votre besoin, vos dates et les habitudes de votre
-              animal. Je vous répondrai rapidement.
-            </p>
+                <label>
+                  Prénom
+                  <input type="text" placeholder="Votre prénom" required />
+                </label>
 
-            <form class="quote-form mx-auto">
-              <input type="email" placeholder="Votre adresse email" required />
-              <button
-                type="submit"
-                aria-label="Envoyer"
-                style="background-color: #5c4432"
-              >
-                <i class="bi bi-arrow-right" style="color: white"></i>
-              </button>
-            </form>
+                <label>
+                  Email
+                  <input
+                    type="email"
+                    placeholder="Votre adresse email"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Message
+                  <textarea placeholder="Votre message..." required></textarea>
+                </label>
+
+                <button type="submit">
+                  Envoyer
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="contact-content">
+              <h2>Demander une <em>disponibilité</em></h2>
+
+              <span class="contact-line"></span>
+
+              <p>
+                Expliquez votre besoin, vos dates et les habitudes de votre
+                animal. Je vous répondrai rapidement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
