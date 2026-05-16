@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vanessa — Garde d'animaux</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <script>
+    const images = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const close = document.querySelector(".close");
+
+    images.forEach((img) => {
+      img.addEventListener("click", () => {
+        lightbox.classList.add("show");
+        lightboxImg.src = img.src;
+      });
+    });
+
+    close.addEventListener("click", () => {
+      lightbox.classList.remove("show");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove("show");
+      }
+    });
+  </script>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light py-4">
+      <div class="container">
+        <a class="navbar-brand logo" href="#">VANESSA M.<span></span></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-lg-4 text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Qui Suis-Je</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Avis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <a
+            href="https://www.rover.com/members/vanessa-m-pattes-et-calins-mon-quotidien/?service_type=drop-in&frequency=onetime&pet_type=cat&location=3%20Rue%20Etienne%20Rognon,%20Lyon,%20France&location_type=address&dog_count=0&cat_count=1&puppy_count=0"
+            class="btn-reserver ms-lg-4"
+            target="_blank"
+          >
+            Réserver
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero container">
+      <div class="hero-bg">
+        <div class="hero-card text-center">
+          <div class="eyebrow">
+            <i class="bi bi-paw-fill"></i> Garde d'animaux
+          </div>
+          <h1>Love & Walk</h1>
+          <p>
+            Visites de vos animaux à domicile et promenades de chiens, avec une
+            présence douce, fiable et attentive pour vos compagnons.
+          </p>
+          <a
+            href="#services"
+            class="btn btn-clean"
+            style="background-color: #5c4432; color: white"
+            >Découvrir</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section vanessa-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center g-5">
+            <div class="col-lg-5 col-md-8">
+              <div class="eyebrow">
+                <i class="bi bi-person-heart"></i> Présentation
+              </div>
+              <h2>À propos de <em>moi</em></h2>
+              <p>
+                J’ai toujours grandi entourée de chats et j’en ai encore un à la
+                maison, donc je connais très bien leurs petits "caprices", leurs
+                heures de sieste sacrées et leurs regards qui disent “donne-moi
+                à manger maintenant”. Ils font partie de mon quotidien,ce qui me
+                permet de comprendre leurs besoins, leurs habitudes et leur
+                langage corporel. Il m’arrive également de garder les chats
+                d’amis.
+              </p>
+              <p>
+                À chaque visite chez vous, je mets tout en œuvre pour que votre
+                animal se sente serein et en confiance. Je respecte totalement
+                ses repères et son petit univers, pour qu’il se sente comme si
+                vous n’étiez jamais partis. Je m’adapte à sa personnalité, qu’il
+                soit timide, turbulent ou ultra câlin, parce que chaque animal
+                est unique et mérite une attention sur mesure. Et comme j’ai moi
+                même un chien et un chat, vous pouvez partir l’esprit
+                tranquille.. votre compagnon sera entre de bonnes mains.
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="image-card image-vanessa">
+                <div class="floating-badge">
+                  <strong><i class="bi bi-heart-pulse"></i></strong
+                  ><span>Confiance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section feature-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center g-5">
+            <div class="col-lg-4 col-md-6">
+              <div class="image-card image-pets">
+                <div class="floating-badge">
+                  <strong>30' - 1H</strong>
+                  <span>Visite à domicile</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-8">
+              <div class="eyebrow">
+                <i class="bi bi-heart-fill"></i> Chiens & Chats
+              </div>
+
+              <h2>Visite <em>à domicile.</em></h2>
+
+              <p>
+                Je me déplace chez vous pour prendre soin de votre animal
+                pendant votre absence. Nourrissage, eau fraîche, nettoyage,
+                moments de jeu et présence rassurante : tout est fait pour qu’il
+                se sente en sécurité.
+              </p>
+
+              <p>
+                Chaque visite est personnalisée selon les habitudes de votre
+                compagnon.
+              </p>
+
+              <a
+                href="https://www.rover.com/members/vanessa-m-pattes-et-calins-mon-quotidien/?service_type=drop-in&frequency=onetime&pet_type=cat&location=3%20Rue%20Etienne%20Rognon,%20Lyon,%20France&location_type=address&dog_count=0&cat_count=1&puppy_count=0"
+                class="btn btn-clean"
+                >Demander</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-section office-section">
+        <div class="container">
+          <div
+            class="row align-items-center justify-content-center g-5 flex-lg-row flex-column-reverse"
+          >
+            <div class="col-lg-5 col-md-8">
+              <div class="eyebrow"><i class="bi bi-tree-fill"></i> Chiens</div>
+              <h2>Promenade <em>sur mesure.</em></h2>
+              <p>
+                Des balades adaptées au rythme, à l'âge et aux habitudes de
+                votre chien : sortie courte, vraie promenade, dépense douce ou
+                passage de confort.
+              </p>
+              <a
+                href="https://www.rover.com/members/vanessa-m-pattes-et-calins-mon-quotidien/?service_type=drop-in&frequency=onetime&pet_type=cat&location=3%20Rue%20Etienne%20Rognon,%20Lyon,%20France&location_type=address&dog_count=0&cat_count=1&puppy_count=0"
+                class="btn btn-clean"
+                >Réserver</a
+              >
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="image-card image-dog">
+                <div class="floating-badge badge-left">
+                  <strong>30'</strong><span>Promenade</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="wave"></div>
+        <div class="container">
+          <div class="row text-center g-5">
+            <div class="col-md-4">
+              <div class="stat">+ de 10</div>
+              <p>Années d'expérience</p>
+            </div>
+            <div class="col-md-4">
+              <div class="stat">98<span>%</span></div>
+              <p>Taux de satisfaction</p>
+            </div>
+            <div class="col-md-4">
+              <div class="stat">12</div>
+              <p>Animaux gardés</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section testimonials">
+        <div class="container">
+          <div class="row justify-content-center g-4">
+            <div class="col-lg-4 col-md-6">
+              <article class="testimonial-card white h-100">
+                <div class="testimonial-avatar">JP</div>
+                <p>
+                  “Nous nous sommes rencontrés avec Vanessa lors de balade avec
+                  nos chiens respectifs ! Il n aura pas fallu plus de temps pour
+                  que GreyBeard, mon husky , ai un coup de cœur pour sa
+                  gentillesse et sa douceur. Depuis, Vanessa est devenu mon
+                  contact numéro 1 pour les balades de GreyBeard lorsque je n ai
+                  pas la possibilité de les faire. Autant lui que moi faisons
+                  confiance à Vanessa sans le moindre doutes ! Je la recommande
+                  fortement !”
+                </p>
+                <h3>James P.</h3>
+                <span>Promenade de chien</span>
+              </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <article class="testimonial-card blue h-100">
+                <div class="testimonial-avatar">LB</div>
+                <p>
+                  “Nous nous sommes rencontrés avec Vanessa lors de balade avec
+                  nos chiens respectifs ! Il n aura pas fallu plus de temps pour
+                  que GreyBeard, mon husky , ai un coup de cœur pour sa
+                  gentillesse et sa douceur. Depuis, Vanessa est devenu mon
+                  contact numéro 1 pour les balades de GreyBeard lorsque je n ai
+                  pas la possibilité de les faire. Autant lui que moi faisons
+                  confiance à Vanessa sans le moindre doutes ! Je la recommande
+                  fortement !”
+                </p>
+                <h3>Lili B.</h3>
+                <span>Promenade chien</span>
+              </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <article class="testimonial-card green h-100">
+                <div class="testimonial-avatar">AM</div>
+                <p>
+                  “Nous nous sommes rencontrés avec Vanessa lors de balade avec
+                  nos chiens respectifs ! Il n aura pas fallu plus de temps pour
+                  que GreyBeard, mon husky , ai un coup de cœur pour sa
+                  gentillesse et sa douceur. Depuis, Vanessa est devenu mon
+                  contact numéro 1 pour les balades de GreyBeard lorsque je n ai
+                  pas la possibilité de les faire. Autant lui que moi faisons
+                  confiance à Vanessa sans le moindre doutes ! Je la recommande
+                  fortement !”
+                </p>
+                <h3>Antoine M.</h3>
+                <span>Garde de chat</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="disponibilites" class="section availability-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="availability-content">
+                <span class="section-label">Disponibilités</span>
+                <h2>Visites à domicile & promenades</h2>
+                <p>
+                  Je me déplace autour de Lyon pour prendre soin de vos
+                  compagnons, que ce soit pour une visite à domicile ou une
+                  promenade régulière.
+                </p>
+
+                <div class="availability-card">
+                  <h3>Visites de chats à domicile</h3>
+                  <p>Lundi · Mardi · Jeudi · Vendredi</p>
+                </div>
+
+                <div class="availability-card">
+                  <h3>Promenades de chiens</h3>
+                  <p>Tous les jours de la semaine</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="map-card">
+                <img
+                  src="assets/map-lyon.png"
+                  alt="Zone d’intervention autour de Lyon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="section-label">Galerie</span>
+            <h2>Mes compagnons 🐾</h2>
+            <p>Quelques moments partagés avec les animaux dont je m’occupe</p>
+          </div>
+
+          <div class="row g-3">
+            <!-- 9 images -->
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/snoop.jpg" class="gallery-img" />
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/rav1.jpg" class="gallery-img" />
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/ramses.jpg" class="gallery-img" />
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/ElPadrinoCat.jpg" class="gallery-img" />
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/mix.jpg" class="gallery-img" />
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/rav2.jpg" class="gallery-img" />
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/snoop2.jpg" class="gallery-img" />
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/ElPadrinoCat2.jpg" class="gallery-img" />
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/rav3.jpg" class="gallery-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" />
+      </div>
+
+      <section id="contact" class="quote-section">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-image">
+              <div class="contact-overlay"></div>
+
+              <form class="contact-form">
+                <label>
+                  Nom
+                  <input type="text" placeholder="Votre nom" required />
+                </label>
+
+                <label>
+                  Prénom
+                  <input type="text" placeholder="Votre prénom" required />
+                </label>
+
+                <label>
+                  Email
+                  <input
+                    type="email"
+                    placeholder="Votre adresse email"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Message
+                  <textarea placeholder="Votre message..." required></textarea>
+                </label>
+
+                <button type="submit">
+                  Envoyer
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="contact-content">
+              <h2>Demander une <em>disponibilité</em></h2>
+
+              <span class="contact-line"></span>
+
+              <p>
+                Expliquez votre besoin, vos dates et les habitudes de votre
+                animal. Je vous répondrai rapidement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center text-center text-lg-start">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="footer-logo">Vanessa M.</h3>
+          <p>
+            Garde d’animaux à domicile à Lyon. Présence douce, fiable et
+            attentive pour vos compagnons.
+          </p>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">Qui suis-je</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h4>Réserver</h4>
+          <p>Consultez mes disponibilités directement sur Rover.</p>
+
+          <a
+            href="https://www.rover.com/members/vanessa-m-pattes-et-calins-mon-quotidien/?service_type=drop-in&frequency=onetime&pet_type=cat&location=3%20Rue%20Etienne%20Rognon,%20Lyon,%20France&location_type=address&dog_count=0&cat_count=1&puppy_count=0"
+            target="_blank"
+            class="btn-reserver"
+          >
+            Réserver
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center mt-5">
+        <p>
+          © 2026
+          <a
+            href="https://antoine-macheda.fr"
+            target="_blank"
+            class="footer-link"
+          >
+            Antoine M.
+          </a>
+          — Tous droits réservés
+        </p>
+      </div>
+    </div>
+  </footer>
+</html>

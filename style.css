@@ -131,16 +131,16 @@ p {
 .btn-clean {
   min-width: 200px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, .65);
+  background: #5c4432;
   border: 0;
-  color: #111;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: .12em;
   padding: .75rem 2rem
 }
 
 .btn-clean:hover {
-  background: #fff;
+  background: #d8c3a5;
   color: #111
 }
 
